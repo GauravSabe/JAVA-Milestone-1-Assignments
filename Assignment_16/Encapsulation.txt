@@ -1,0 +1,199 @@
+Assignment_16 
+
+
+				Encapsulation
+
+Q.1 What is Encapsulation in Java?  Why is it called Data hiding ?
+→What is Encapsulation : 
+* ●  Binding of data and corresponding methods into a single unit is called "Encapsulation".
+* ●  If any java class follows data hiding and abstraction then such class is referred as "Encapsulated class".
+Encapsulation = Data Hiding + Data Abstraction.
+
+Because : 
+Data encapsulation leads to the very important concept of data hiding. In short, encapsulation is a method of binding the data and functions together in a capsule to hide the complexity of a class. In encapsulation, the members inside a class can be public, protected, or private.
+
+
+
+Q.2 What are the important features of Encapsulation ?
+→Encapsulation in Java is the process by which data (variables) and the code that acts upon them (methods) are integrated as a single unit.
+   *  By encapsulating a class's variables, other classes cannot access them, and only the methods of the class can access them.
+
+
+
+Q.3 What are getter and setter methods in Java Explain with an example ?
+→ Setters and Getters
+  
+ * Setter methods are used to set the value to the instance variables of the class. 
+Syntax for setter method : 
+a. compulsory the method name should start with set. 
+b. it should be public.
+c. return type should be void.
+d. compulsorily it should have some argument.
+
+   * Getter methods are used to get the value from the instance variables of the class.
+Syntax for getter method : 
+a. compulsory the method name should start with get. 
+b. it should be public.
+c. return type should not be void.
+d. compulsorily it should not have any argument.
+
+Example : 
+
+Program to demonstrate the usage of setters and getters
+
+class Student 
+{
+private String name; 
+private Integer id; 
+private String address;
+//setters
+public void setName(String name)
+{
+this.name = name;
+}
+public void setId(Integer id)
+{
+this.id = id;
+}
+public void setAddress(String address)
+{
+this.address = address;
+}
+//getters
+public Integer getId()
+{
+return id;
+}
+public String getName()
+{
+return name;
+}
+public String getAddress()
+{
+return address;
+} 
+}
+public class Demo {
+public static void main(String[] args) {
+Student std = new Student(); 
+std.setId(10); 
+std.setName("sachin");
+ std.setAddress("MI");
+System.out.println("Id is :: "+std.getId()); 
+System.out.println("Name is :: "+std.getName()); 
+System.out.println("Address is :: "+std.getAddress());
+}
+ }
+
+Output
+Name is  :: sachin
+Id is  :: 10
+Address is :: MI
+
+
+
+Q.4 What is the use of this keyword explaine with an example ?
+→To resolve the “Shadowing problem”  we need to use , “this”  keyword.
+- this keyword would always point to current object, and this variable would hold the address of the active object present in the heap memory.
+
+
+Example : 
+
+Program to resolve the problem of shadowing
+
+class Student 
+{
+private String name;
+private Integer id; 
+private String address;
+Student(String name,Integer id, String address)
+{ 
+this.name = name;
+this.id = id; 
+this.address = address;
+}
+public void display()
+{
+System.out.println("Name is System.out.println("Id is :: "+id); 
+System.out.println("Address is :: "+address);
+}
+ }
+class Demo 
+{
+public static void main(String[] args) 
+{
+Student std = new Student("sachin",10,"MI");
+ std.display();
+}
+ }
+
+Output
+Name is :: sachin
+Id is :: 10
+Address is :: MI
+
+
+Q.5 What is the advantage of Encapsulation ?
+Advantage of Encapsulation : 
+   1. We can achieve security.  
+   2. Enhancement becomes easy.
+   3. Maintainability and modularisation becomes easy.
+   4. It provides flexibility to the user to use the system very easily.
+
+
+
+Q.6 How to achieve encapsulation in Java? Give an example.
+→Encapsulation in Java can be achieved by:
+   * Declaring the variables of a class as private.
+   * Providing public setter and getter methods to modify and view the variables values.
+
+Example : 
+
+class Student 
+{
+private String name; 
+private Integer id; 
+private String address;
+//setters
+public void setName(String name)
+{
+this.name = name;
+}
+public void setId(Integer id)
+{
+this.id = id;
+}
+public void setAddress(String address)
+{
+this.address = address;
+}
+//getters
+public Integer getId()
+{
+return id;
+}
+public String getName()
+{
+return name;
+}
+public String getAddress()
+{
+return address;
+} 
+}
+public class Demo {
+public static void main(String[] args) {
+Student std = new Student(); 
+std.setId(10); 
+std.setName("sachin");
+ std.setAddress("MI");
+System.out.println("Id is :: "+std.getId()); 
+System.out.println("Name is :: "+std.getName()); 
+System.out.println("Address is :: "+std.getAddress());
+}
+ }
+
+Output
+Name is  :: sachin
+Id is  :: 10
+Address is :: MI

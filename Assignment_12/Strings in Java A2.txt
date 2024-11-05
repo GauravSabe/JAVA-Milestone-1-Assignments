@@ -1,0 +1,41 @@
+﻿Assignment_12
+
+
+Strings in Java
+
+
+2. How do you concatenate two strings in Java? Give an example?
+→ To concate 2 Strings in java we use
+*  public String concat(String str)
+→ To concate 2 or more Strings in java we use 
+* ‘+’ operator
+Example : 
+ 
+  String s1="Gaurav";
+  System.out.println(s1.concat(" Sabe")); //Gaurav Sabe
+  String s = "Gaurav" + " sabe";
+  System.out.print(s); //Gaurav Sabe
+
+
+3. How do you find the length of a string in Java Explain with an example?
+→ length()
+* It returns the no of characters present in the String.
+Example : 
+String s="INeuron";
+System.out.print(s.length());//7 
+System.out.print(s.length);//Compile time error
+
+
+4. How do you compare two strings in Java? Give an Example
+→To compare 2 Strings in java we use following approach 
+
+
+a. == operator
+* It compares the reference of the Object.
+b. equals()
+* compares the contents of two objects.
+Example : 
+String s1 = new String("sachin");
+String s2 = new String("sachin"); 
+System.out.println(s1==s2); //false
+System.out.println(s1.equals(s2));//true

@@ -1,0 +1,65 @@
+Assignment_11 
+
+
+Strings in Java
+
+ 1.What is a String in Java ? 
+→String it refers to an Object in java present in package called java.lang.String. String refers to collection of characters.
+Example : 
+     String s= "sachin"; 
+      System.out.println(s); //sachin
+String s =new String("sachin");
+System.out.println(s); //sachin
+* In java String object is by default immutable,meaning once the object is created we cannot change the value of the object, if we try to change then those changes will be
+reflected on the new object not on the existing object.  
+Example : 
+String s= "sachin";
+System.out.println(s); //sachin
+s.concat("tendulkar"); //(new object got created with modification so immutable) 
+System.out.println(s);// sachin
+Note:
+String s1 =new String("sachin");
+In this case 2 objects will be created one in the heap and the other one in the String Constant Pool, the reference will always point to Heap.
+
+
+ 2.Type of String in Java are ?
+→Types of String
+In java Strings are classified into 2 type ,
+1.Mutable String
+2.Immutable String
+Mutable String :
+Once if we create a String, on that String if we try to perform any operation and if those changes get reflected in the same object then such strings are called “Mutable String”.
+Example: StringBuffer, StringBuilder
+Immutable String :
+Once if we create a String, on that String if we try to perform any operation then those changes won’t be reflected in the same object, rather a new object will be created.Such type of String is called as “Immutable String”.
+Example: String
+
+
+ 3.In how many ways can you create string objects in Java ? 
+→You can create a String by −
+Step 1 − Assigning a string value wrapped in " " to a String type variable.
+String message = “Gaurav”;
+Step 2 − Creating an object of the String class using the new keyword by passing the string value as a parameter of its constructor.
+String message = new String (“Gaurav”);
+Step 3 − Passing a character array to the String constructor.
+char arr[] = {'H','e','l','l','o'};
+String message = new String(arr);
+
+
+ 4.What is a String constant pool ? 
+→ The Java string constant pool is an area in heap memory where Java stores literal string values. The heap is an area of memory used for run-time operations. When a new variable is created and given a value, Java checks to see if that exact value exists in the pool.
+
+
+ 5.What do you mean by mutable and immutable objects ? 
+→Mutable String :
+Once if we create a String, on that String if we try to perform any operation and if those changes get reflected in the same object then such strings are called “Mutable String”.
+   * Example: StringBuffer, StringBuilder
+
+
+   * Immutable String :
+Once if we create a String, on that String if we try to perform any operation then those changes won’t be reflected in the same object, rather a new object will be created.Such type of String is called as “Immutable String”.
+   * Example: String
+
+
+ 6.Where exactly in the String constant pool located in the memory? 
+→The Java String Pool is stored in the Heap space.

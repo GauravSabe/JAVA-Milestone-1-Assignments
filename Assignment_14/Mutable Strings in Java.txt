@@ -1,0 +1,36 @@
+Assignment_14
+
+
+                                   Mutable Strings in Java
+
+
+Q.1 What is a Mutable String in Java Explain with an example ?
+→Once if we create a String, on that String if we try to perform any operation and if those changes get reflected in the same object then such strings are called “Mutable String”.
+
+* Example: StringBuffer, StringBuilder
+
+1.StringBuffer(1.0v)
+* If the content will change frequently then it is not recommended to go for String object becoz for every new change a new Object will be created.
+* To handle this type of requirement, we have a StringBuffer / StringBuilder concept.
+* StringBuffer sb=new StringBuffer();
+Creates an empty StringBuffer object with default initial capacity of "16".
+* Once StringBuffer reaches its maximum capacity a new StringBuffer Object will be created. 
+
+* new capacity = (current capacity+1) * 2;
+
+Example : 
+	StringBuffer sb = new StringBuffer(); 
+	System.out.println(sb.capacity()); //16 
+	sb.append("abcdefghijklmnop");
+ 	System.out.println(sb.capacity()); //16 
+	sb.append('q'); 
+	System.out.println(sb.capacity()); //34
+
+1.StringBuilder(1.5v)
+   * StringBuilder is the same as StringBuffer(1.0V) with few differences.
+
+   * StringBuilder : 
+   * - No methods are synchronized.
+   * - At a time more than one thread can operate so it is not ThreadSafe.
+   * - Threads are not required to wait so performance is high.
+   * - Introduced in jdk1.5 version

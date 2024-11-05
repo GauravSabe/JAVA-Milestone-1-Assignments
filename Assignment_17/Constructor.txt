@@ -1,0 +1,111 @@
+﻿Assignment_17
+
+
+     Constructor
+
+
+Q.1 What is a Constructor ?
+→Constructor : 
+* Object creation is not enough, compulsorily we should perform initialization then only the object is in a position to provide the response properly.
+* Whenever we are creating an object some piece of the code will be executed automatically to perform initialization of an object. This piece of code is nothing but a constructor.
+* Main objective of the constructor is nothing but initialisation of Object.
+
+Q.2 What is Constructor Chaining ?
+→ Constructor Overloading/Constructor Chaining
+* A class can contain more than one constructor and all these constructors have the same name they differ only in the type of argument, hence these constructors are considered as "Overloaded constructor".
+Example : 
+
+class Test 
+{
+Test(double d) 
+{
+System.out.println("double argument constructor");
+}
+Test(int i) 
+{ 
+this(10.5);
+System.out.println("int argument constructor");
+}
+Test() 
+{ 
+this(10);
+System.out.println("no argument constructor");
+}
+ }
+public class MainApp 
+{
+public static void main(String[] args) throws Exception 
+{
+Test t1= new Test(); //double int no argument constructor 
+Test t2= new Test(10); // double int argument constructor 
+Test t3= new Test(10.5) ; //double argument constructor
+} 
+}   
+
+Q.3 Can we call a subclass constructor from a superclass constructor ?
+→ No. We cannot call a subclass constructor from a superclass constructor.
+
+
+Q.4 What happens if you keep a return type for a constructor ?
+→ Since constructor can only return the object to class, it's implicitly done by java runtime and we are not supposed to add a return type to it.
+* If we add a return type to a constructor, then it will become a method of the class. 
+* This is the way java runtime distinguish between a normal method and a constructor.
+
+
+Q.5 What is No-arg constructor ?
+→As the name suggests, a no-argument constructor is one that does not accept any arguments or parameters. The default constructor is the only no-argument constructor of a class. In other words, you can have one – and only one – no argument constructor in a class.
+
+
+Q.6 How is a No-argument constructor different from the default Constructor ?
+→Java won't provide a default constructor if you write any kind of constructor in class. One difference between them is that the body of default constructor will always be empty whereas we can insert our own code in no-arg constructor.
+Q.7 When do we need Constructor Overloading ?
+→The purpose of constructor overloading is to provide different ways to initialize an object of a class. 
+* The purpose of method overloading is to provide different ways to perform a specific action in a class. Constructors do not have a return type.
+
+Q.8 What is the Default constructor Explain with an Example ?
+→ Default constructor : 
+* For every java class constructor concept is applicable.
+* If we don't write any constructor, then the compiler will generate a default constructor.
+* If we write at least one constructor then the compiler won't generate any default constructor, so we say every java class will have a compiler generated default constructor or programmer written constructor but not both simultaneously.
+Prototype of default constructor : 
+* There is always no argument constructor.
+* The access modifier of the default constructor is the same as the class modifier. [applicable for public and default]
+* Default constructor contains one line, super(). It is a call to super class constructor.
+Example : 
+class Test
+{
+}
+public class Test
+{ 
+}
+class Test
+{
+void Test()
+{
+}
+}
+—----------------------------------------------------------------------------------------------------------
+class Test
+{
+Test()
+{ 
+super(); 
+} 
+}
+public class Test
+{
+public Test()
+{
+super();
+ } 
+}
+class Test
+{
+Test()
+{
+super();
+}
+void Test()
+{
+}
+}
